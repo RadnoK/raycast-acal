@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.radnok.cailendar.calendar-reader</string>
+    <key>CFBundleName</key>
+    <string>Cailendar Calendar Reader</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>Cailendar reads meeting history to suggest a title, time, and attendees. This helper does not save events.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Cailendar reads meeting history for AI meeting suggestions.</string>
+</dict>
+</plist>

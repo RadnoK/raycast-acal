@@ -1,0 +1,119 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "cailendar",
+  "title": "Cailendar",
+  "description": "Plan meetings from a prompt or Fireflies conversation, using calendar history and Raycast AI.",
+  "icon": "extension-icon.png",
+  "author": "alfaro_konrad",
+  "categories": [
+    "Productivity",
+    "Communication"
+  ],
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "commands": [
+    {
+      "name": "schedule-meeting",
+      "title": "Schedule Meeting",
+      "subtitle": "Cailendar",
+      "description": "Describe a meeting. Raycast AI uses your calendar history to draft it for review.",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "prompt",
+          "type": "text",
+          "placeholder": "Project sync tomorrow at 5 PM with Alex",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "fireflies-meetings",
+      "title": "Browse Fireflies Meetings",
+      "subtitle": "Cailendar",
+      "description": "Search conversations and propose a follow-up meeting.",
+      "mode": "view"
+    },
+    {
+      "name": "connection-status",
+      "title": "Cailendar Connections",
+      "description": "Connect Fireflies and check access to Raycast AI and calendars.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "timeZone",
+      "title": "Default Time Zone",
+      "description": "IANA time zone used for scheduling; PL time always means Europe/Warsaw.",
+      "type": "textfield",
+      "default": "Europe/Warsaw",
+      "required": true,
+      "placeholder": "Europe/Warsaw"
+    },
+    {
+      "name": "historyDays",
+      "title": "Calendar History",
+      "description": "How far back to look for similar meetings.",
+      "type": "dropdown",
+      "default": "90",
+      "required": true,
+      "data": [
+        {
+          "title": "30 days",
+          "value": "30"
+        },
+        {
+          "title": "90 days",
+          "value": "90"
+        },
+        {
+          "title": "180 days",
+          "value": "180"
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist -o dist",
+    "dev": "ray develop",
+    "lint": "eslint src tests && prettier --check .",
+    "fix-lint": "eslint src tests --fix && prettier --write .",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "verify": "npm run build && npm run lint && npm run check && npm test",
+    "lint:store": "ray lint",
+    "publish": "ray publish"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@raycast/api": "2.2.1",
+    "@raycast/utils": "2.3.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "2.2.0",
+    "@types/mock-require": "3.0.0",
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.18",
+    "eslint": "9.39.5",
+    "mock-require": "3.0.3",
+    "prettier": "3.9.6",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RadnoK/raycast-acal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RadnoK/raycast-acal/issues"
+  },
+  "engines": {
+    "node": ">=22.22.2"
+  }
+}
