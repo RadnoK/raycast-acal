@@ -63,6 +63,7 @@ References: [Store preparation](https://developers.raycast.com/basics/prepare-an
 Release candidate checked on September 9, 2026:
 
 - `npm run verify`: distribution build, ESLint/Prettier, TypeScript, and all 25 tests passed.
+- The local checkout was renamed to `raycast-acal`; `npx ray build -e dist` then successfully rebuilt and refreshed the installed extension. Installed metadata reports version `1.0.0` and author `alfaro_konrad`, with source maps referring to the new folder and both native slices passing strict signature checks.
 - `npm run lint:store`: author `alfaro_konrad`, manifest, icon, ESLint, and formatting passed.
 - Native helper: both `arm64` and `x86_64` slices build and pass strict code-signature verification. Both report Calendar permission status successfully; invalid history ranges return the intended error.
 - Native helper: calendar usage descriptions and stable signing identifier verified. Status is ungranted when launched outside Raycast, matching the previous helper. This does not prove the new helper can read authorized history when launched by Raycast.
@@ -71,4 +72,6 @@ Release candidate checked on September 9, 2026:
 
 Before public submission, verify authorized Calendar history and the complete proposal/confirmation flow in Raycast with this candidate. The native UI automation connection failed during release preparation (`Sky Computer Use native pipe startup failed`), so a fresh UI check and Store screenshots could not be completed. Screenshots should use synthetic data; none of the user's private meetings were added to the repository.
 
-The GitHub CI run provides an independent clean-checkout build. Preparing this repository does not publish to the Raycast Store.
+[GitHub Actions run 34330103364](https://github.com/RadnoK/raycast-acal/actions/runs/34330103364) passed on a clean macOS 26 runner for source commit `44c30f5`. Dependency installation, distribution build, lint, TypeScript, all 25 tests, Store metadata, and both native signatures succeeded. The run includes the `cailendar-distribution` artifact (retained for 14 days).
+
+Preparing this repository does not publish to the Raycast Store.
