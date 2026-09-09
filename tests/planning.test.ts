@@ -13,7 +13,7 @@ import type {
 const history: HistoricalEvent = {
   id: "actual-event",
   calendarId: "work",
-  title: "JEB Sync",
+  title: "Project Sync",
   start: "2026-09-01T15:00:00Z",
   end: "2026-09-01T15:30:00Z",
   timeZone: "Europe/Warsaw",
@@ -25,7 +25,7 @@ const history: HistoricalEvent = {
 const context: PlanningContext = {
   now: "2026-09-08T10:00:00Z",
   timeZone: "Europe/Warsaw",
-  prompt: "JEB Sync jutro 17:00 PL z Mike",
+  prompt: "Project Sync jutro 17:00 PL z Mike",
   history: {
     events: [history],
     calendars: [
@@ -35,7 +35,7 @@ const context: PlanningContext = {
   },
 };
 const event: ProposedMeeting = {
-  title: "JEB Sync",
+  title: "Project Sync",
   date: "2026-09-09",
   time: "17:00",
   timeZone: "Europe/Warsaw",
@@ -45,7 +45,7 @@ const event: ProposedMeeting = {
   location: "",
   googleMeet: true,
   calendarHint: "Work",
-  reasoning: "Poprzedni JEB Sync",
+  reasoning: "Poprzedni Project Sync",
   assumptions: [],
   historyIds: ["actual-event"],
 };
@@ -86,11 +86,11 @@ test("retrieval uses title or real attendee identity and ignores unrelated event
     title: "Dentysta",
     attendees: [],
   };
-  assert.deepEqual(relevantHistory([unrelated, history], "JEB Sync"), [
+  assert.deepEqual(relevantHistory([unrelated, history], "Project Sync"), [
     history,
   ]);
   assert.deepEqual(relevantHistory([unrelated, history], "z Mike"), [history]);
-  assert.deepEqual(relevantHistory([unrelated], "Reflex jak zwykle"), []);
+  assert.deepEqual(relevantHistory([unrelated], "Team jak zwykle"), []);
 });
 test("future events and unrelated calendar metadata are excluded from history sent to AI", () => {
   const future = { ...history, id: "future", start: "2026-09-10T15:00:00Z" };

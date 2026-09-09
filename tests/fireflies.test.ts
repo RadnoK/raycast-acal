@@ -9,7 +9,7 @@ import {
 
 const meeting = {
   id: "ff1",
-  title: "Reflex Sync",
+  title: "Team Sync",
   date: 1788256800000,
   duration: 45,
   participants: ["mike@example.com"],

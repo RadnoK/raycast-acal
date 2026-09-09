@@ -6,8 +6,8 @@ Enter a request, for example:
 
 - `Project sync tomorrow at 5 PM Warsaw time with Alex`
 - `Design review as usual on Tuesday at 4 PM`
-- `JEB Sync jutro o 17:00 PL z Mike`
-- `Reflex Sync jak zwykle we wtorek o 16:00`
+- `Project Sync jutro o 17:00 PL z Mike`
+- `Team Sync jak zwykle we wtorek o 16:00`
 
 Polish and English requests are supported. "As usual" uses matching past events; missing or ambiguous details lead to a clarification question. Guest email addresses must come from your request, matching history, or the selected Fireflies meeting.
 
