@@ -121,7 +121,7 @@ export default function Connections() {
                     const result = await authorizeCalendar();
                     if (!result.authorized)
                       throw new Error(
-                        "Enable access for Raycast/Cailendar in System Settings → Privacy & Security → Calendars.",
+                        "Enable access for Raycast/Acal in System Settings → Privacy & Security → Calendars.",
                       );
                   })
                 }

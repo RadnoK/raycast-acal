@@ -1,6 +1,6 @@
 # Privacy and Data Flow
 
-Cailendar contains no analytics or tracking service and does not log tokens, transcripts, or calendar contents. There is no credential server operated by this project.
+Acal contains no analytics or tracking service and does not log tokens, transcripts, or calendar contents. There is no credential server operated by this project.
 
 ## What is read
 

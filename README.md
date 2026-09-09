@@ -1,6 +1,6 @@
-# Cailendar
+# Acal
 
-Plan meetings in Raycast from a natural-language request or a Fireflies conversation. Cailendar uses your synced Mac Calendar history and Raycast AI to suggest the title, guests, time, and agenda, then opens an editable Google Calendar form for your confirmation.
+Plan meetings in Raycast from a natural-language request or a Fireflies conversation. Acal uses your synced Mac Calendar history and Raycast AI to suggest the title, guests, time, and agenda, then opens an editable Google Calendar form for your confirmation.
 
 No API keys are required. Fireflies uses browser sign-in, and AI runs through your Raycast AI access. Polish and English requests are supported.
 
@@ -14,8 +14,8 @@ No API keys are required. Fireflies uses browser sign-in, and AI runs through yo
 
 ## Setup
 
-1. Open **Cailendar Connections** in Raycast.
-2. Select **Mac Calendar History → Allow Calendar Access**. macOS calls this permission "Full Access"; Cailendar's native helper only reads events and does not create, modify, or delete them.
+1. Open **Acal Connections** in Raycast.
+2. Select **Mac Calendar History → Allow Calendar Access**. macOS calls this permission "Full Access"; Acal's native helper only reads events and does not create, modify, or delete them.
 3. Select **Fireflies → Connect Fireflies** and finish browser sign-in. This step is optional when scheduling directly from a request.
 4. Open **Create Event** in the Google Calendar extension and complete its Google sign-in.
 5. Run **Schedule Meeting** or **Browse Fireflies Meetings**.
@@ -24,13 +24,13 @@ No API keys are required. Fireflies uses browser sign-in, and AI runs through yo
 
 - **Schedule Meeting** — describe a meeting (`Project sync tomorrow at 5 PM Warsaw time with Alex`) and review the proposal before confirming.
 - **Browse Fireflies Meetings** — search your recordings and plan a follow-up from a selected transcript.
-- **Cailendar Connections** — connect Fireflies and check Calendar and Raycast AI access.
+- **Acal Connections** — connect Fireflies and check Calendar and Raycast AI access.
 
 Command details, settings, limits, and troubleshooting are in [docs/USAGE.md](docs/USAGE.md).
 
 ## Privacy
 
-Calendar history is read locally through Apple's EventKit and is never sent to Fireflies. When you generate a proposal, Raycast AI receives your request, matching past events, and only the transcript of the meeting you selected. Fireflies tokens are stored with Raycast's OAuth API; there is no credential server operated by this project. Cailendar contains no analytics or tracking and does not log tokens, transcripts, or calendar contents.
+Calendar history is read locally through Apple's EventKit and is never sent to Fireflies. When you generate a proposal, Raycast AI receives your request, matching past events, and only the transcript of the meeting you selected. Fireflies tokens are stored with Raycast's OAuth API; there is no credential server operated by this project. Acal contains no analytics or tracking and does not log tokens, transcripts, or calendar contents.
 
 **Only submitting the final Google Calendar form creates an event.** Full details are in [docs/PRIVACY.md](docs/PRIVACY.md).
 

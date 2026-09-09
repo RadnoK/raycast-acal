@@ -1,6 +1,6 @@
-# Releasing Cailendar
+# Releasing Acal
 
-The GitHub repository is `RadnoK/raycast-acal`; the Raycast extension identifier is `cailendar`. Keep the identifier stable because Raycast scopes stored settings and OAuth credentials to the extension.
+The GitHub repository is `RadnoK/raycast-acal`; the Raycast extension identifier is `acal`. Keep the identifier stable because Raycast scopes stored settings and OAuth credentials to the extension.
 
 ## Build Requirements
 
@@ -32,7 +32,7 @@ npx ray build -e dist
 
 This refreshes the installed local extension. Finish or cancel any OAuth flow before rebuilding.
 
-- Open **Cailendar Connections** and verify Calendar permission and Raycast AI access.
+- Open **Acal Connections** and verify Calendar permission and Raycast AI access.
 - Open **Browse Fireflies Meetings**, finish OAuth in one browser profile, and verify that real meetings load. Reopen the command and confirm no second sign-in is needed.
 - Search for a meeting, inspect its summary, and generate a follow-up from the selected transcript.
 - Generate a proposal from a direct prompt and confirm that cited history and guests are accurate.
@@ -72,6 +72,16 @@ Release candidate checked on September 9, 2026:
 
 Before public submission, verify authorized Calendar history and the complete proposal/confirmation flow in Raycast with this candidate. The native UI automation connection failed during release preparation (`Sky Computer Use native pipe startup failed`), so a fresh UI check and Store screenshots could not be completed. Screenshots should use synthetic data; none of the user's private meetings were added to the repository.
 
-[GitHub Actions run 34330103364](https://github.com/RadnoK/raycast-acal/actions/runs/34330103364) passed on a clean macOS 26 runner for source commit `44c30f5`. Dependency installation, distribution build, lint, TypeScript, all 25 tests, Store metadata, and both native signatures succeeded. The run includes the `cailendar-distribution` artifact (retained for 14 days).
+[GitHub Actions run 34330103364](https://github.com/RadnoK/raycast-acal/actions/runs/34330103364) passed on a clean macOS 26 runner for source commit `44c30f5`. Dependency installation, distribution build, lint, TypeScript, all 25 tests, Store metadata, and both native signatures succeeded. The run includes the `cailendar-distribution` artifact (retained for 14 days; the workflow now produces `acal-distribution`).
+
+## Rename to Acal
+
+The extension was renamed from `cailendar` to `acal` after the validation record above. The entries above were produced against the `cailendar` identifier and no longer describe the current build.
+
+Raycast scopes stored settings and OAuth credentials to the extension identifier, so the rename resets them. Re-verify before submission:
+
+- The saved Fireflies session does not survive the rename. Complete a fresh OAuth sign-in and confirm the token is stored and reused.
+- Calendar permission is granted to a new native helper identifier (`com.radnok.acal.calendar-reader`). Re-grant Full Access and confirm history reads succeed when launched by Raycast.
+- Extension preferences return to their defaults (`Europe/Warsaw`, 90 days).
 
 Preparing this repository does not publish to the Raycast Store.

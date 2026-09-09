@@ -52,7 +52,7 @@ private enum CalendarReaderError: LocalizedError, CustomStringConvertible {
     var errorDescription: String? {
         switch self {
         case .accessRequired:
-            "Allow Cailendar/Raycast to read calendars in the Cailendar Connections command."
+            "Allow Acal/Raycast to read calendars in the Acal Connections command."
         case .authorizationFailed:
             "Could not request calendar access. Check calendar permissions in System Settings."
         case .invalidRange:

@@ -37,7 +37,7 @@ async function exchange(
   });
   if (!response.ok) {
     const message =
-      "Could not refresh your Fireflies session. Reconnect in Cailendar Connections.";
+      "Could not refresh your Fireflies session. Reconnect in Acal Connections.";
     if (response.status === 400 || response.status === 401)
       throw new ReauthenticationRequired(message);
     throw new Error(message);
@@ -68,7 +68,7 @@ export async function connectFireflies(): Promise<string> {
       signal: AbortSignal.timeout(30_000),
       redirect: "error",
       body: JSON.stringify({
-        client_name: "Cailendar for Raycast",
+        client_name: "Acal for Raycast",
         redirect_uris: [redirectURI],
         grant_types: ["authorization_code", "refresh_token"],
         response_types: ["code"],
@@ -123,7 +123,7 @@ export async function firefliesToken(forceRefresh = false): Promise<string> {
 async function storedFirefliesToken(forceRefresh = false): Promise<string> {
   const tokens = await client.getTokens();
   if (!tokens)
-    throw new Error("Connect your Fireflies account in Cailendar Connections.");
+    throw new Error("Connect your Fireflies account in Acal Connections.");
   if (!forceRefresh && !tokens.isExpired()) return tokens.accessToken;
   if (refreshing) return refreshing;
   refreshing = (async () => {

@@ -10,14 +10,14 @@ let infoPlist = URL(fileURLWithPath: #filePath)
 
 let package = Package(
     // The linker uses the executable name as its ad hoc signing identifier.
-    name: "com.radnok.cailendar.calendar-reader",
+    name: "com.radnok.acal.calendar-reader",
     platforms: [.macOS(.v14)],
     dependencies: [
         .package(url: "https://github.com/raycast/extensions-swift-tools", exact: "1.1.0")
     ],
     targets: [
         .executableTarget(
-            name: "com.radnok.cailendar.calendar-reader",
+            name: "com.radnok.acal.calendar-reader",
             dependencies: [
                 .product(name: "RaycastSwiftMacros", package: "extensions-swift-tools"),
                 .product(name: "RaycastSwiftPlugin", package: "extensions-swift-tools"),

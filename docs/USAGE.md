@@ -1,4 +1,4 @@
-# Using Cailendar
+# Using Acal
 
 ## Schedule Meeting
 
@@ -17,7 +17,7 @@ The proposal shows its sources, assumptions, and any overlapping timed events. *
 
 Browse your meetings, search by title, and open a meeting's summary. Choose **Plan Follow-Up** to read the selected transcript and propose a meeting based on next steps, deadlines, and scheduling agreements. You can add instructions before generating the proposal.
 
-The extension uses Fireflies' official OAuth and MCP endpoints. It automatically reuses and refreshes the saved session. To disconnect, open **Cailendar Connections → Fireflies → Sign Out of Fireflies**.
+The extension uses Fireflies' official OAuth and MCP endpoints. It automatically reuses and refreshes the saved session. To disconnect, open **Acal Connections → Fireflies → Sign Out of Fireflies**.
 
 ## Settings
 
@@ -39,6 +39,6 @@ The default time zone is `Europe/Warsaw` and the history window is 90 days. Chan
 
 **Fireflies uses a different Chrome profile:** Select **Copy authorization link** in Raycast and open that original link in the signed-in profile. Complete every step in the same profile. Moving an intermediate login URL between profiles can cause `Session binding verification failed`.
 
-**Calendar access is denied:** Enable Calendar access for Raycast/Cailendar in **System Settings → Privacy & Security → Calendars**, then reopen the command. Confirm that your calendars are syncing in the Mac Calendar app.
+**Calendar access is denied:** Enable Calendar access for Raycast/Acal in **System Settings → Privacy & Security → Calendars**, then reopen the command. Confirm that your calendars are syncing in the Mac Calendar app.
 
-**The confirmation form does not open:** Install and sign in to the Google Calendar extension linked above. Cailendar relies on its `Create Event` command.
+**The confirmation form does not open:** Install and sign in to the Google Calendar extension linked above. Acal relies on its `Create Event` command.

@@ -22,7 +22,7 @@ async function readTool(
   retry = false,
 ): Promise<unknown> {
   const token = await firefliesToken(retry);
-  const client = new Client({ name: "cailendar-raycast", version: "1.0.0" });
+  const client = new Client({ name: "acal-raycast", version: "1.0.0" });
   const transport = new StreamableHTTPClientTransport(new URL(FIREFLIES_MCP), {
     requestInit: {
       headers: { Authorization: `Bearer ${token}` },
@@ -44,7 +44,7 @@ async function readTool(
       return readTool(name, args, signal, true);
     if (error instanceof StreamableHTTPError)
       throw new Error(
-        `Fireflies connection error (${error.code}). Check your account in Cailendar Connections.`,
+        `Fireflies connection error (${error.code}). Check your account in Acal Connections.`,
       );
     throw error;
   } finally {

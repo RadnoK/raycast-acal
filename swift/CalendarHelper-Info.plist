@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>com.radnok.cailendar.calendar-reader</string>
+    <string>com.radnok.acal.calendar-reader</string>
     <key>CFBundleName</key>
-    <string>Cailendar Calendar Reader</string>
+    <string>Acal Calendar Reader</string>
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>NSCalendarsFullAccessUsageDescription</key>
-    <string>Cailendar reads meeting history to suggest a title, time, and attendees. This helper does not save events.</string>
+    <string>Acal reads meeting history to suggest a title, time, and attendees. This helper does not save events.</string>
     <key>NSCalendarsUsageDescription</key>
-    <string>Cailendar reads meeting history for AI meeting suggestions.</string>
+    <string>Acal reads meeting history for AI meeting suggestions.</string>
 </dict>
 </plist>
